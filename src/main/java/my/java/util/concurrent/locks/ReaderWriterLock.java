@@ -46,6 +46,7 @@ public class ReaderWriterLock<TReaderWriterLock extends ReadWriteLock> extends R
   
   /**
    * This method acquires the <code>read lock</code>. This method must be called in try-with-resource statement.
+   * <pre>
    * <b>Example:</b>
    *     final ReaderWriterLock<ReentrantReadWriteLock> readerWriterLock = new ReaderWriterLock<ReentrantReadWriteLock>(new ReentrantReadWriteLock());
    *     try(AutoCloseableLock<ReadLock> readLock = readerWriterLock.acquireReadLock()) // Current thread blocks till read lock is acquired.
@@ -65,6 +66,7 @@ public class ReaderWriterLock<TReaderWriterLock extends ReadWriteLock> extends R
 
   /**
    * This method acquires the <code>write lock</code>. This method must be called in try-with-resource statement.
+   * <pre>
    * <b>Example:</b>
    *     final ReaderWriterLock<ReentrantReadWriteLock> readerWriterLock = new ReaderWriterLock<ReentrantReadWriteLock>(new ReentrantReadWriteLock());
    *     try(AutoCloseableLock<WriteLock> writeLock = readerWriterLock.acquireReadLock()) // Current thread blocks till write lock is acquired.
